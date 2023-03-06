@@ -1,0 +1,165 @@
+/* Main style */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* Small Reset */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables CSS */
+:root {
+    --bg-color: #161313;
+    --text-color: #BBB;
+    --card-bg-color: #201E1E;
+    --star-color: #CEC652;
+}
+
+
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);    
+}
+
+/* Votre CSS ici */
+
+.flex-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+
+  }
+  
+  .flex-item {
+    background: #242527;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 65px;
+    padding: 131px 75px 57px 65px;
+    position: relative;
+    z-index: -2;
+
+  }
+
+  h1 {
+    margin-top: 93px;
+    margin-bottom: 118px;
+    text-align: center;
+    color: #F6F9FF;
+    font-family: 'Raleway' light, sans-serif;
+    font-size: 42px;
+    text-align: center;
+    
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.72px;
+    line-height: 21px;
+    text-align: left;
+    color: #F6F9FF;
+    width: 328px;
+    height: 294px;
+    opacity: 1;
+    top: 131px;
+    z-index: 1;   
+}
+
+p::before {
+    font-family: 'Font Awesome 6 Free';
+    content: '\f10d';  
+    color : #3C3D3E;  
+    font-size: 80px;
+    opacity: 1;
+    height: 56px;
+    width: 65px;
+    z-index: -1;    
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+
+
+.star:before {
+    content: '\2605';
+    color: #BFB23A;
+    font-size: 36px;
+}
+
+.star {
+    display: inline-block;
+    width: 38px;
+    height: 36px;
+    margin-top: 58px;
+}
+
+.stars {
+    text-align: center;
+}
+
+.photo_avatar {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    object-fit: cover; 
+    width: 165px;
+    height: 165px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button_plus {
+    border: 1px solid #F6F9FF;
+    padding: 18px 33px;
+    border-radius: 4px;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 163px;
+    height: 56px;  
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 85px;
+    transition: all 0.3s ease 0s;
+    position: relative;
+
+}
+.button_plus:after {
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    z-index: -1;
+}
+.button_plus:hover,
+.button_plus:focus {
+  color: #f8f8f8;
+}
+
+.button_plus:after {
+    background: #242527;
+    top:0; bottom: 0; left: 0; right: 100%;
+  }
+  .button_plus:hover,
+  .button_plus:focus {
+    background-color: transparent;
+  }
+  .button_plus:hover:after,
+  .button_plus:focus:after{
+    right:0;
+  }
